@@ -219,3 +219,19 @@ var typed = new Typed(".type", {
   backSpeed: 60,
   loop: true,
 });
+
+
+
+const fadeButton = document.querySelector('.fade-button');
+
+function fadeOutButton() {
+  fadeButton.classList.add('fade-out');
+  setTimeout(() => {
+    fadeButton.classList.remove('fade-out');
+    // إعادة استدعاء الدالة لجعل التلاشي مستمرًا
+    setTimeout(fadeOutButton, 3000); // 3000 مللي ثانية = 3 ثواني (مدة الظهور)
+  }, 1500); // 1500 مللي ثانية = 1.5 ثانية (مدة التلاشي)
+}
+
+// استدعاء الدالة مباشرة عند تحميل الصفحة
+fadeOutButton();

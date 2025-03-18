@@ -73,7 +73,20 @@
     <!-- Home -->
     <section class="home section" id="home">
       <div class="home_container container grid">
-        <div class="home_content grid">
+        <div class="home_content grid" dir="ltr">
+          <div class="home_social" style="margin-left: 50%;" >
+            <a href="https://www.instagram.com/e7o_e?igsh=bXU2a3d4ZzRqMHhi" class="home_social-icon" target="_blank">
+              <i class="uil uil-instagram-alt"></i>
+            </a>
+
+            <a href="https://www.snapchat.com/add/saleh_alattas23?share_id=wdgp0_vmRFOgeAdVxGlC3g&locale=ar_SA@calendar=gregorian" class="home_social-icon" target="_blank">
+              <i class="uil uil-snapchat-alt"></i>
+            </a>
+            
+            <a href="https://wa.me/qr/2X47RJQHPHJ3G1" class="home_social-icon" target="_blank">
+              <i class="uil uil-whatsapp-alt"></i>
+            </a>
+          </div>
 
           <div class="home_img">
             <svg class="home_blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
@@ -89,19 +102,26 @@
                     165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
                     129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
                     -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
-                <image class="home_blob-img" x="12" y="8" href="./assets/img/icon.png" />
+                <image class="home_blob-img" x="18" y="8" href="./assets/img/icon.png" />
               </g>
             </svg>
           </div>
 
-          <div class="home_data">
+          <div class="home_data" dir="rtl">
             <h1 class="home_title" style="font-family: 'Courier New', Courier, monospace; ;">أهـلا ,أنا صالح العطاس</h1>
             <h3 class="home_subtitle">انا <u>مصـور</u> <span class="type"></span></h3>
             <p class="home_description">
                مصور محترف أومن بأن كل لقطة تحمل قصة. هنا، ستجد عالمًا من التفاصيل التي تجعل ذكرياتك خالدة
             </p>
-            <a href="#contact" class="button button--flex">
+            <a href="#contact"  class="button button--flex" style="text-align: center; display: block;">
+              
+              
               تواصل معي   
+              <i class="uil uil-message"></i>
+            </a>
+            
+            <a href="https://drive.google.com/drive/folders/1NPQsIMn3wmrDSd40mqQ61Tn6SbD9Wz_g" target="_blank" rel="خطا" class=" fade-button button button--flex"  style="text-align: center; display: block; margin-top: 10px;">
+              تصفح اخـر الصـور  
               <i class="uil uil-message"></i>
             </a>
           </div>
@@ -247,7 +267,19 @@
     <i class="uil uil-arrow-up scrollup_icon"></i>
   </a>
 
-
+  <script>
+    const fadeButton = document.querySelector('.fade-button');
+  
+    function fadeOutButton() {
+      fadeButton.classList.add('fade-out');
+      setTimeout(() => {
+        fadeButton.classList.remove('fade-out');
+        setTimeout(fadeOutButton, 1500);
+      }, 1500);
+    }
+  
+    fadeOutButton();
+  </script>
   <!-- JQuery -->
   <script src="./assets/js/jquery.min.js"></script>
 
